@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Homepage</name>
+   <name>Button_Cancel</name>
    <tag></tag>
-   <elementGuidId>4848c348-2ce7-4927-b945-91953fec0246</elementGuidId>
+   <elementGuidId>8be882c5-5668-472c-8d08-360a0adf74b1</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>#inventory_sidebar_link</value>
+         <value>#cancel</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//a[@id='inventory_sidebar_link']</value>
+         <value>//button[@id='cancel']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -21,135 +21,127 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>a</value>
-      <webElementGuid>f61a7cc1-8f3e-4e82-a5b1-53b452e90eea</webElementGuid>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>id</name>
-      <type>Main</type>
-      <value>inventory_sidebar_link</value>
-      <webElementGuid>bd25c722-0717-434a-bb7b-72c2f4a701a6</webElementGuid>
+      <value>button</value>
+      <webElementGuid>874bacd5-5064-4e59-801d-6e4e211771f3</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>bm-item menu-item</value>
-      <webElementGuid>bbef8a29-3897-43b2-b5ad-2b4852b51675</webElementGuid>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>href</name>
-      <type>Main</type>
-      <value>#</value>
-      <webElementGuid>0fe5cb93-f868-410c-8da3-d8a289f842b4</webElementGuid>
+      <value>btn btn_secondary back btn_medium cart_cancel_link</value>
+      <webElementGuid>c429f65e-fd9e-4100-b8ca-aab3a3bf6087</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>tabindex</name>
+      <name>data-test</name>
       <type>Main</type>
-      <value>0</value>
-      <webElementGuid>5dc91c9e-36bb-4938-887d-3ec4017c451e</webElementGuid>
+      <value>cancel</value>
+      <webElementGuid>f5810e31-8fa3-4b57-8bea-9f9f3323949e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>cancel</value>
+      <webElementGuid>c8263b33-64e1-4755-966d-d526d8b10c82</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>cancel</value>
+      <webElementGuid>6a9192bb-77f9-4ef3-82f2-9c9fc41359e1</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>All Items</value>
-      <webElementGuid>e447d5fd-2b92-49ca-9275-ef7bd71e5696</webElementGuid>
+      <value>Cancel</value>
+      <webElementGuid>f4c5c27e-e02b-4a30-8854-de3513b2a8e9</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;inventory_sidebar_link&quot;)</value>
-      <webElementGuid>f0006976-8a23-48cb-97bc-56f07f874874</webElementGuid>
+      <value>id(&quot;cancel&quot;)</value>
+      <webElementGuid>97e8fc72-d480-4555-9134-90997a113590</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//a[@id='inventory_sidebar_link']</value>
-      <webElementGuid>195df2fa-b541-4f13-8d78-bde599731e49</webElementGuid>
+      <value>//button[@id='cancel']</value>
+      <webElementGuid>adf8c96b-1f44-4d42-b2c4-30e740df948f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='menu_button_container']/div/div[2]/div/nav/a</value>
-      <webElementGuid>9ff6e6c4-9436-4cba-9172-285c8458fb82</webElementGuid>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:link</name>
-      <type>Main</type>
-      <value>//a[contains(text(),'All Items')]</value>
-      <webElementGuid>a73e3022-cfbc-40b3-b1d0-abbb9a0bfc30</webElementGuid>
+      <value>//div[@id='checkout_summary_container']/div/div[2]/div[9]/button</value>
+      <webElementGuid>9d1aedd7-a8dc-4504-b06c-3a39e0ff0f81</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Open Menu'])[1]/following::a[1]</value>
-      <webElementGuid>8ef4148b-4eb4-4868-8e8d-aefbbcece372</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Total: $32.39'])[1]/following::button[1]</value>
+      <webElementGuid>1fd082fd-ba32-4bf8-8df0-6175ff31a907</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='About'])[1]/preceding::a[1]</value>
-      <webElementGuid>a23b9554-017a-48bb-9679-2408b3557559</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Tax: $2.40'])[1]/following::button[1]</value>
+      <webElementGuid>89067153-bfb4-4de8-b967-ee81192f37d8</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Close Menu'])[1]/preceding::a[4]</value>
-      <webElementGuid>7aed8948-8caa-4159-8399-b71cb39b2b85</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Finish'])[1]/preceding::button[1]</value>
+      <webElementGuid>3189ae5f-6460-4e9a-bbb3-96b9af1f27a3</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>//*/text()[normalize-space(.)='All Items']/parent::*</value>
-      <webElementGuid>63afc693-b275-41e7-8a58-975b6b8db7a1</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Twitter'])[1]/preceding::button[2]</value>
+      <webElementGuid>8e156abf-06eb-483a-a79f-fa436b594676</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:href</name>
+      <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>//a[contains(@href, '#')]</value>
-      <webElementGuid>0afdf5e7-d43a-4076-92fb-c31939411e66</webElementGuid>
+      <value>//*/text()[normalize-space(.)='Cancel']/parent::*</value>
+      <webElementGuid>5380f5a4-8a5b-43fe-9f2d-753cd65712a8</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//a</value>
-      <webElementGuid>dcc2b6a7-cc1b-43e2-82fa-fa8e3045cca1</webElementGuid>
+      <value>//div[9]/button</value>
+      <webElementGuid>f77839e0-7ee7-416a-93b3-3e9c816e18db</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//a[@id = 'inventory_sidebar_link' and @href = '#' and (text() = 'All Items' or . = 'All Items')]</value>
-      <webElementGuid>75a7206a-ed01-4885-b003-73960172f487</webElementGuid>
+      <value>//button[@id = 'cancel' and @name = 'cancel' and (text() = 'Cancel' or . = 'Cancel')]</value>
+      <webElementGuid>cfe54f99-e2d7-472e-976d-18bd85643c75</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

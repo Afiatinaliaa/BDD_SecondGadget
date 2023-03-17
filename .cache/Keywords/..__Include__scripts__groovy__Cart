@@ -1,10 +1,10 @@
 {
-  "keywordFileContentHash": "48B8C7D6822616B02906175A2CD1A90D",
+  "keywordFileContentHash": "166D9F8EB8B0136304B8588877A63F03",
   "keywordClasses": [
     {
       "name": "Cart",
       "keywordMethods": []
     }
   ],
-  "javadocParsed": true
+  "javadocParsed": false
 }

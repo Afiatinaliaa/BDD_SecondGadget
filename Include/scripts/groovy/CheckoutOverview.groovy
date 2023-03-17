@@ -43,47 +43,27 @@ import cucumber.api.java.en.When
 
 
 
-class Cart {
+class CheckoutOverview {
 	/**
 	 * The step definitions below match with Katalon sample Gherkin steps
 	 */
-
-	@When("I click Add to Cart button")
-	def I_click_Add_to_Cart_button() {
-		WebUI.click(findTestObject('Object Repository/Homepage/Button_Add to Cart'))
+	@When("I click on the Finish button")
+	public void i_click_on_the_Finish_button() {
+		WebUI.click(findTestObject('Object Repository/Checkout Overview/Button_Finish'))
 	}
-	@Then("I have been added product to cart")
-	def I_have_been_added_product_to_cart() {
-		WebUI.verifyElementVisible(findTestObject('Object Repository/Homepage/button_Remove'))
+	
+	@Then("I should be navigated to Order Success page")
+	public void i_should_be_navigated_to_Order_Success_page() {
+		WebUI.verifyElementVisible(findTestObject('Object Repository/Checkout Complete/Text_Succes Order'))
 	}
-	@When("I see a product that has been added in the Cart")
-	def I_see_a_product_that_has_been_added_in_the_Cart() {
-		WebUI.click(findTestObject('Object Repository/Homepage/Icon Link_Cart'))
-		WebUI.verifyElementVisible(findTestObject('Object Repository/Cart/Badge'))
-		WebUI.verifyElementVisible(findTestObject('Object Repository/Cart/List_Product'))
+	
+	@When("I click Cancel button on the Checkout Overview")
+	public void i_click_Cancel_button_on_the_Checkout_Overview() {
+		WebUI.click(findTestObject('Object Repository/Checkout Overview/Button_Cancel'))
 	}
-	@When("I click Cart icon")
-	def I_click_Cart_icon() {
-		WebUI.click(findTestObject('Object Repository/Homepage/Icon Link_Cart'))
-	}
-	@When("I click on the Checkout button")
-	def I_click_on_the_Checkout_button() {
-		WebUI.click(findTestObject('Object Repository/Cart/button_Checkout'))
-	}
-	@When("I click on the Remove button")
-	def I_click_on_the_Remove_button() {
-		WebUI.click(findTestObject('Object Repository/Cart/Button_Remove Product'))
-	}
-	@Then("I should be navigated to Cart Page")
-	def I_should_be_navigated_to_Cart_Page() {
-		WebUI.verifyElementVisible(findTestObject('Object Repository/Cart/button_Continue Shopping'))
-	}
-	@Then("I should be navigated to Checkout page")
-	def I_should_be_navigated_to_Checkout_page() {
-		WebUI.verifyElementVisible(findTestObject('Object Repository/Checkout/Text_Checkout Your Info'))
-	}
-	@Then("I should be unable to view product in the cart")
-	def I_should_be_unable_to_view_product_in_the_cart( ) {
-		WebUI.verifyElementNotPresent(findTestObject('Object Repository/Cart/List_Product'), 30)
+	
+	@Then("I should be navigated to SwagLabs Homepage")
+	public void i_should_be_navigated_to_SwagLabs_Homepage() {
+		WebUI.verifyElementVisible(findTestObject('Object Repository/Homepage/Button_Filter'))
 	}
 }

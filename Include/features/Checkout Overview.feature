@@ -1,32 +1,29 @@
-#Author: your.email@your.domain.com
-#Keywords Summary :
-#Feature: List of scenarios.
-#Scenario: Business rule through list of steps with arguments.
-#Given: Some precondition step
-#When: Some key actions
-#Then: To observe outcomes or validation
-#And,But: To enumerate more Given,When,Then steps
-#Scenario Outline: List of steps for data-driven as an Examples and <placeholder>
-#Examples: Container for s table
-#Background: List of steps run before each of the scenarios
-#""" (Doc Strings)
-#| (Data Tables)
-#@ (Tags/Labels):To group Scenarios
-#<> (placeholder)
-#""
-## (Comments)
-#Sample Feature Definition Template
-@tag
-Feature: Title of your feature
-  I want to use this template for my feature file
+@CheckoutOverview
+Feature: Checkout Overview feature
 
-  @tag1
-  Scenario Outline: Title of your scenario outline
-    Given I want to write a step with <name>
-    When I check for the <value> in step
-    Then I verify the <status> in step
-
-    Examples: 
-      | name  | value | status  |
-      | name1 |     5 | success |
-      | name2 |     7 | Fail    |
+  Background: 
+    Given I open https://www.saucedemo.com/
+    When I input valid standard_user and secret_sauce
+    And I click on the Login button
+    Then I should be navigated to SwagLabs homepage
+    When I click Add to Cart button
+    Then I have been added product to cart
+    And I see a product that has been added in the Cart
+    And I click on the Checkout button
+    Then I should be navigated to Checkout page
+    When I input olivia, Rodrigo, and 12345 on the First Name, Last Name, and Postal Code field
+    And I click on the Continue button
+    Then I should be navigated to Checkout:Overview page
+    
+    
+    #PositiveTestCase
+    @CO001
+    Scenario: Continue completing checkout
+    When I click on the Finish button
+    Then I should be navigated to Order Success page
+    
+    #NegativeTestCase
+    @CO002
+    Scenario: Cancel completing checkout
+    When I click Cancel button on the Checkout Overview
+    Then I should be navigated to SwagLabs Homepage
