@@ -1,0 +1,62 @@
+@ProductDetail
+Feature: Product Detail feature
+
+  Background: 
+    Given I open https://www.saucedemo.com/
+    When I input valid standard_user and secret_sauce
+    And I click on the Login button
+    Then I should be navigated to SwagLabs homepage
+    
+  #Positive_Test_Case
+  @PD001
+  Scenario: View Product Detail
+  When I click on the Product Name
+  Then I should be navigated to Product Detail page
+  
+  @PD002
+  Scenario: VView Cart page through Product Detail (Empty State)
+  When I click on the Product Name
+  Then I should be navigated to Product Detail page
+  When I click on the Cart icon Empty
+  Then I should be navigated to Cart page
+  And I should be unable to see product in the Cart page
+  
+  @PD003
+  Scenario: Add product to Cart through Product Detail page
+  When I click on the Product Name
+  Then I should be navigated to Product Detail page
+  When I click on the Add to Cart button
+  Then I successfully added product to Cart
+  
+  @PD004
+  Scenario: View Cart page through Product Detail
+  When I click on the Product Name
+  Then I should be navigated to Product Detail page
+  When I click on the Add to Cart button
+  Then I successfully added product to Cart
+  When I click on the Cart icon
+  Then I should be navigated to Cart page
+  And I see product in the Cart page
+  
+  #Negative_Test_Case
+  @PD005
+  Scenario: Back to Homepage
+  When I click on the Product Name
+  Then I should be navigated to Product Detail page
+  When I click on the Add to Cart button
+  Then I successfully added product to Cart
+  When I click on the Back to Product button
+  Then I should be navigated to Homepage
+  
+  @PD006
+  Scenario: Cancel Add Product to Cart
+  When I click on the Product Name
+  Then I should be navigated to Product Detail page
+  When I click on the Add to Cart button
+  Then I successfully added product to Cart
+  When I click on the Remove button on the Product Detail
+  And I click on the Cart icon Empty
+  Then I successfully remove product from cart
+  
+  
+  
