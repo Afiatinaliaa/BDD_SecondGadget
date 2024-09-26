@@ -1,32 +1,45 @@
-#Author: your.email@your.domain.com
-#Keywords Summary :
-#Feature: List of scenarios.
-#Scenario: Business rule through list of steps with arguments.
-#Given: Some precondition step
-#When: Some key actions
-#Then: To observe outcomes or validation
-#And,But: To enumerate more Given,When,Then steps
-#Scenario Outline: List of steps for data-driven as an Examples and <placeholder>
-#Examples: Container for s table
-#Background: List of steps run before each of the scenarios
-#""" (Doc Strings)
-#| (Data Tables)
-#@ (Tags/Labels):To group Scenarios
-#<> (placeholder)
-#""
-## (Comments)
-#Sample Feature Definition Template
-@tag
-Feature: Title of your feature
-  I want to use this template for my feature file
+@Homepage
+Feature: Homepage feature
 
-  @tag1
-  Scenario Outline: Title of your scenario outline
-    Given I want to write a step with <name>
-    When I check for the <value> in step
-    Then I verify the <status> in step
-
-    Examples: 
-      | name  | value | status  |
-      | name1 |     5 | success |
-      | name2 |     7 | Fail    |
+  Background: 
+    Given I open https://www.saucedemo.com/
+    When I input valid standard_user and secret_sauce
+    And I click on the Login button
+    Then I should be navigated to SwagLabs homepage
+    
+	#PositiveTestCase
+	@HP001
+	Scenario: Filter Product based on ASC
+	When User click on the Filter dropdwon
+	And User click on the "Name (A to Z)" filter
+	Then System should be sort product list based on ASC
+	
+	@HP002
+	Scenario: Filter Product based on DESC
+	When User click on the Filter dropdwon
+	And User click on the "Name (Z to A)" filter
+	Then System should be sort product list based on DESC
+	
+	@HP003
+	Scenario: Filter Product based on the cheapest
+	When User click on the Filter dropdwon
+	And User click on the "Price (Low to High)" filter
+	Then System should be sort product list based on the cheapest
+	
+	@HP004
+	Scenario: Filter Product based on the most expensive
+	When User click on the Filter dropdwon
+	And User click on the "Price (High to Low)" filter
+	Then System should be sort product list based on the most expensive
+	
+	@HP005
+	Scenario: Add to Cart from Homepage
+	When User click on the Filter dropdwon
+	And User click on the "Price (Low to High)" filter
+	Then System should be sort product list based on the cheapest
+	
+	@HP006
+	Scenario: Remove product from cart through Homepage
+	When User click on the Filter dropdwon
+	And User click on the "Price (Low to High)" filter
+	Then System should be sort product list based on the cheapest

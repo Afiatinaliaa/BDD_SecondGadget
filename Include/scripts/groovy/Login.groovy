@@ -40,6 +40,7 @@ import cucumber.api.java.en.And
 import cucumber.api.java.en.Given
 import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
+import org.openqa.selenium.Keys
 
 
 
@@ -48,15 +49,15 @@ class Login {
 	 * The step definitions below match with Katalon sample Gherkin steps
 	 */
 
-	@Given("I open https://www.saucedemo.com/")
-	def I_open_https_www_saucedemo_com() {
+	@Given("I have opened https://www.saucedemo.com/")
+	def I_have_opened_https_www_saucedemo_com() {
 		WebUI.openBrowser('')
+		WebUI.waitForPageLoad(5)
 		WebUI.navigateToUrl('https://www.saucedemo.com/')
 	}
 
-	@When("I input invalid (.*) and (.*)")
-	def I_input_invalid_username_and_password(String username, String password) {
-		WebUI.setText(findTestObject('Object Repository/Login Page/Text Field_Username'), username)
+	@When("I input valid password (.*)")
+	def I_input_valid_password(String password) {
 		WebUI.setText(findTestObject('Object Repository/Login Page/Text Field_Password'), password)
 	}
 
@@ -65,9 +66,66 @@ class Login {
 		WebUI.click(findTestObject('Object Repository/Login Page/Button_Login'))
 	}
 
+	@Then ("I should be viewed username required alert")
+	def I_should_be_viewed_username_required_alert() {
+		WebUI.verifyElementPresent(findTestObject('Object Repository/Login Page/Alert_usernameRequired'), 15)
+	}
+
+	@Given("I input valid username (.*)")
+	def I_input_valid_username(String username) {
+		WebUI.setText(findTestObject('Object Repository/Login Page/Text Field_Username'), username)
+	}
+
+	@When("I have cleared text on the password field")
+	def I_have_cleared_text_on_the_password_field() {
+		WebUI.click(findTestObject('Object Repository/Login Page/Field_passwordInputted'))
+		WebUI.sendKeys(findTestObject('Object Repository/Login Page/Field_passwordInputted'), Keys.chord(Keys.CONTROL, "a", Keys.DELETE))
+		WebUI.delay(3)
+	}
+
+	@Then ("I should be viewed password required alert")
+	def I_should_be_viewed_password_required_alert() {
+		WebUI.verifyElementPresent(findTestObject('Object Repository/Login Page/Alert_passwordRequired'), 15)
+		WebUI.delay(3)
+	}
+
+	//	@Given("I have cleared text on the username and password field")
+	//	def I_have_cleared_text_on_the_username_and_password_field() {
+	//		WebUI.click(findTestObject('Object Repository/Login Page/Field_usernameInputted'))
+	//		WebUI.sendKeys(findTestObject('Object Repository/Login Page/Field_usernameInputted'), Keys.chord(Keys.CONTROL, "a", Keys.DELETE))
+	//		WebUI.delay(3)
+	//	}
+	//
+	//	@Then ("I should be viewed username and password required alert")
+	//	def I_should_be_viewed_username_and_password_required_alert() {
+	//		WebUI.verifyElementPresent(findTestObject('Object Repository/Login Page/Alert_Failed Login'), 15)
+	//	}
+
+	@Given("I have cleared text on the username")
+	def I_have_cleared_text_on_the_username() {
+		WebUI.click(findTestObject('Object Repository/Login Page/Field_usernameInputted'))
+		WebUI.sendKeys(findTestObject('Object Repository/Login Page/Field_usernameInputted'), Keys.chord(Keys.CONTROL, "a", Keys.DELETE))
+		WebUI.delay(3)
+	}
+
+	@When("I input invalid (.*) and (.*)")
+	def I_input_invalid_username_and_password(String username, String password) {
+		WebUI.setText(findTestObject('Object Repository/Login Page/Text Field_Username'), username)
+		WebUI.setText(findTestObject('Object Repository/Login Page/Text Field_Password'), password)
+	}
+
 	@Then ("I should be failed to login")
 	def I_should_be_failed_to_login() {
-		WebUI.verifyElementPresent(findTestObject('Object Repository/Login Page/Alert_Failed Login'), 15)
+		WebUI.verifyElementPresent(findTestObject('Object Repository/Login Page/Alert_Failed Login'), 5)
+	}
+
+	@Given("I have cleared text on the username and password")
+	def I_have_cleared_text_on_the_username_and_password() {
+		WebUI.click(findTestObject('Object Repository/Login Page/Field_invalidUsername'))
+		WebUI.sendKeys(findTestObject('Object Repository/Login Page/Field_invalidUsername'), Keys.chord(Keys.CONTROL, "a", Keys.DELETE))
+		WebUI.click(findTestObject('Object Repository/Login Page/Field_invalidPassword'))
+		WebUI.sendKeys(findTestObject('Object Repository/Login Page/Field_invalidPassword'), Keys.chord(Keys.CONTROL, "a", Keys.DELETE))
+		WebUI.delay(3)
 	}
 
 	@When("I input valid (.*) and (.*)")

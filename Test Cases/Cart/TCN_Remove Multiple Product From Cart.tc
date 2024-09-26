@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TCN_Remove Multiple Product From Cart</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>36e330b8-7965-4b76-895d-3f8c869c7410</testCaseGuid>
+</TestCaseEntity>

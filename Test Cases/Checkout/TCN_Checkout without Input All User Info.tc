@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TCN_Checkout without Input All User Info</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e2128914-7f8c-4f93-a90f-b9cb85613620</testCaseGuid>
+</TestCaseEntity>

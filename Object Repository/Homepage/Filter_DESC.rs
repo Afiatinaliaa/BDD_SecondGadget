@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>Filter_DESC</name>
+   <tag></tag>
+   <elementGuidId>714fb5cd-2ccc-42d2-9ac1-3179cff98dfc</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[contains(text(),'Name (Z to A)']
+</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>DIV</value>
+      <webElementGuid>559d93ce-efc6-4ed0-893d-6d57d843c10b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>xpath1727328613187</value>
+      <webElementGuid>033a12b1-78d0-4c1a-821c-35d1476a53eb</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

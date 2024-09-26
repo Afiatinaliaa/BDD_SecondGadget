@@ -47,6 +47,29 @@ class Product_Detail {
 	/**
 	 * The step definitions below match with Katalon sample Gherkin steps
 	 */
+//	@Given("I have opened https://www.saucedemo.com/")
+//	def I_have_opened_https_www_saucedemo_com() {
+//		WebUI.openBrowser('')
+//		WebUI.waitForPageLoad(5)
+//		WebUI.navigateToUrl('https://www.saucedemo.com/')
+//	}
+//	
+//	@When("I input valid (.*) and (.*)")
+//	def I_input_valid_username_and_password(String username, String password) {
+//		WebUI.setText(findTestObject('Object Repository/Login Page/Text Field_Username'), username)
+//		WebUI.setText(findTestObject('Object Repository/Login Page/Text Field_Password'), password)
+//	}
+//	
+//	@And("I click on the Login button")
+//	def I_click_on_the_Login_button() {
+//		WebUI.click(findTestObject('Object Repository/Login Page/Button_Login'))
+//	}
+//	
+//	@Then("I should be navigated to SwagLabs homepage")
+//	def I_should_be_navigated_to_SwagLabs_homepage() {
+//		WebUI.verifyElementPresent(findTestObject('Object Repository/Homepage/Icon Link_Cart'), 15)
+//	}
+//	
 	@When("I click on the Product Name")
 	public void i_click_on_the_Product_Name() {
 		WebUI.click(findTestObject('Object Repository/Homepage/Text Link_Product Name'))

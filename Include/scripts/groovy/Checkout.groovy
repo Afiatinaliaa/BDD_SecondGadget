@@ -47,6 +47,26 @@ class Checkout {
 	/**
 	 * The step definitions below match with Katalon sample Gherkin steps
 	 */
+	@When("I click Checkout button on the cart page")
+	public void i_click_Checkout_button_on_the_cart_page() {
+		WebUI.click(findTestObject('Object Repository/Cart/button_Checkout'))
+	}
+
+	@When("I clear on the Last Name field")
+	public void I_clear_on_the_Last_Name_field() {
+		WebUI.clearText(findTestObject('Object Repository/Checkout/field_lastNameInputted'))
+	}
+
+	@When("I clear on the Postal Code field")
+	public void I_clear_on_the_Postal_Code_field() {
+		WebUI.clearText(findTestObject('Object Repository/Checkout/Text Field_Postalcode'))
+	}
+
+	@When("I clear on the First Name field")
+	public void I_clear_on_the_First_Name_field() {
+		WebUI.clearText(findTestObject('Object Repository/Checkout/Text Field_Firstname'))
+	}
+
 	@When("I input (.*), (.*), and (.*) on the First Name, Last Name, and Postal Code field")
 	public void i_input_firstname_lastname_and_postalcode_on_the_First_Name_field(String firstname, String lastname, String postalcode) {
 		WebUI.setText(findTestObject('Object Repository/Checkout/Text Field_Firstname'), firstname)
@@ -54,56 +74,54 @@ class Checkout {
 		WebUI.setText(findTestObject('Object Repository/Checkout/Text Field_Postalcode'), postalcode)
 	}
 
-	@When("I click on the Continue button")
-	public void i_click_on_the_Continue_button() {
-		WebUI.click(findTestObject('Object Repository/Checkout/Button_Continue'))
-	}
-
-	
-	@Then("I should be navigated to Checkout:Overview page")
-	public void i_should_be_navigated_to_Checkout_Overview_page() {
-		WebUI.verifyElementVisible(findTestObject('Object Repository/Checkout Overview/Button_Finish'))
-	}
-
-	
-	@When("I input (.*) and (.*) on the Last Name and Postal Code field")
-	public void i_input_lastname_and_postalcode_on_the_Last_Name_and_Postal_Code_field(String lastname, String postalcode) {
+	@And("I input (.*) and (.*) on the First Name and Last Name field")
+	public void i_input_firstname_and_lastname_on_the_First_Name_and_Last_Name_field(String firstname, String lastname) {
+		WebUI.setText(findTestObject('Object Repository/Checkout/Text Field_Firstname'), firstname)
 		WebUI.setText(findTestObject('Object Repository/Checkout/Text Field_lastname'), lastname)
-		WebUI.setText(findTestObject('Object Repository/Checkout/Text Field_Postalcode'), postalcode)
 	}
-	
-	@Then("I should be able to see error message First Name is Required")
-	public void i_should_be_able_to_see_error_message_First_Name_is_Required() {
-		WebUI.verifyElementVisible(findTestObject('Object Repository/Checkout/Alert_First Name is required'))
-	}
-	
+
 	@When("I input (.*) and (.*) on the First Name and Postal Code field")
 	public void i_input_firstname_and_postalcode_on_the_First_Name_and_Postal_Code_field(String firstname, String postalcode) {
 		WebUI.setText(findTestObject('Object Repository/Checkout/Text Field_Firstname'), firstname)
 		WebUI.setText(findTestObject('Object Repository/Checkout/Text Field_Postalcode'), postalcode)
 	}
-	
+
+	@And("I input (.*) and (.*) on the Last Name and Postal Code field")
+	public void i_input_lastname_and_postalcode_on_the_Last_Name_and_Postal_Code_field(String lastname, String postalcode) {
+		WebUI.setText(findTestObject('Object Repository/Checkout/Text Field_lastname'), lastname)
+		WebUI.setText(findTestObject('Object Repository/Checkout/Text Field_Postalcode'), postalcode)
+	}
+
+	@When("I click on the Continue button")
+	public void I_click_on_the_Continue_button() {
+		WebUI.click(findTestObject('Object Repository/Checkout/Button_Continue'))
+	}
+
+	@Then("I should be navigated to Checkout:Overview page")
+	public void i_should_be_navigated_to_Checkout_Overview_page() {
+		WebUI.verifyElementVisible(findTestObject('Object Repository/Checkout Overview/Button_Finish'))
+	}
+
+	@Then("I should be able to see error message First Name is Required")
+	public void i_should_be_able_to_see_error_message_First_Name_is_Required() {
+		WebUI.verifyElementVisible(findTestObject('Object Repository/Checkout/Alert_First Name is required'))
+	}
+
 	@Then("I should be able to see error message Last Name is Required")
 	public void i_should_be_able_to_see_error_message_Last_Name_is_Required() {
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Checkout/Alert_Last Name is required'))
 	}
-	
-	@When("I input (.*) and (.*) on the First Name and Last Name field")
-	public void i_input_firstname_and_lastname_on_the_First_Name_and_Last_Name_field(String firstname, String lastname) {
-		WebUI.setText(findTestObject('Object Repository/Checkout/Text Field_Firstname'), firstname)
-		WebUI.setText(findTestObject('Object Repository/Checkout/Text Field_lastname'), lastname)
-	}
-	
+
 	@Then("I should be able to see error message Postal Code is Required")
 	public void i_should_be_able_to_see_error_message_Postal_Code_is_Required() {
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Checkout/Alert_Postal Code is required'))
 	}
-	
-	@When("I click on the Cancel button")
-	public void i_click_on_the_Cancel_button() {
+
+	@When("I click on the Cancel button CO")
+	public void i_click_on_the_Cancel_button_CO() {
 		WebUI.click(findTestObject('Object Repository/Checkout/Button_Cancel'))
 	}
-	
+
 	@Then("I should be navigated to cart page")
 	public void i_should_be_navigated_to_cart_page() {
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Cart/button_Checkout'))
