@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TCP_Remove Product (via Product Detail)</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>b4a05b16-dffe-45fd-8a7f-8e609ceea0ec</testCaseGuid>
+</TestCaseEntity>
